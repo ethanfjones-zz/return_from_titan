@@ -9,7 +9,7 @@ done = False
 
 def game_intro():
 	intro = False
-	intro_background = pygame.image.load("assets/title_screen.png")
+	intro_background = pygame.image.load("images/title_screen.png")
 	# Get dimensions of background
 	width = background.get_width()
 	height = background.get_height() 
@@ -190,7 +190,7 @@ class Meteor(pygame.sprite.Sprite):
 
 clock = pygame.time.Clock()
 
-background = pygame.image.load("assets/background.png")
+background = pygame.image.load("images/background.png")
 
 # Get dimensions of background
 width = background.get_width()
@@ -200,21 +200,21 @@ screen = pygame.display.set_mode((width,height))
 background = background.convert()
 x = 0 
 
-PLAYER_SURFACE = pygame.image.load("assets/player.png").convert_alpha()
+PLAYER_SURFACE = pygame.image.load("images/player.png").convert_alpha()
 METEOR_IMAGES = []
 METEOR_LIST = [
-	"assets/meteors/meteor1.png",
-	"assets/meteors/meteor2.png",
-	"assets/meteors/meteor3.png",
-	"assets/meteors/meteor4.png",
-	"assets/meteors/meteor5.png",
-	"assets/meteors/meteor6.png",
-	"assets/meteors/meteor7.png",
-	"assets/meteors/meteor8.png",
-	"assets/meteors/meteor9.png",
-	"assets/meteors/meteor10.png",
-	"assets/meteors/meteor11.png",
-	"assets/meteors/meteor12.png"
+	"images/meteors/meteor1.png",
+	"images/meteors/meteor2.png",
+	"images/meteors/meteor3.png",
+	"images/meteors/meteor4.png",
+	"images/meteors/meteor5.png",
+	"images/meteors/meteor6.png",
+	"images/meteors/meteor7.png",
+	"images/meteors/meteor8.png",
+	"images/meteors/meteor9.png",
+	"images/meteors/meteor10.png",
+	"images/meteors/meteor11.png",
+	"images/meteors/meteor12.png"
 ]
 for image in METEOR_LIST:
 	METEOR_IMAGES.append(pygame.image.load(image).convert_alpha())
