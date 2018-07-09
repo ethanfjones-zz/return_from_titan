@@ -42,7 +42,7 @@ def game_loop(background):
 	while not done:
 		dt = clock.tick(30)
 		# Main event Loop 
-		for event in pygame.event.get():git c
+		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				done = True
 			if event.type == pygame.MOUSEBUTTONDOWN:
@@ -65,6 +65,7 @@ def game_loop(background):
 			health -= 1
 			if health <= 0:
 				game_over()
+				
 			print("Shuttle hit")
 			create_meteor()
 			print(health)
