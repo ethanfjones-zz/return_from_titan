@@ -6,6 +6,3 @@ with Python increase. Below is a list of features I have planed for the game
 3. Have animation of flame when player.ignite function is called
 4. Add score and have text on screen 
 5. Add health feature to the ship 
-6. Add Game Over screen when health = 0 
-7. Add main menu
-8. Move while loop to a `main` function, clean up global namespace

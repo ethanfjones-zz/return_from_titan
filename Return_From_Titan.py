@@ -1,4 +1,4 @@
-## All images found @ http://kenney.nl/assets/space-shooter-extension and http://kenney.nl/assets/space-shooter-redux
+## All assets found @ http://kenney.nl/assets/space-shooter-extension and http://kenney.nl/assets/space-shooter-redux
 import pygame
 import random
 pygame.init()
@@ -9,7 +9,7 @@ done = False
 
 def game_intro():
 	intro = False
-	intro_background = pygame.image.load("images/title_screen.png")
+	intro_background = pygame.image.load("assets/title_screen.png")
 	# Get dimensions of background
 	width = background.get_width()
 	height = background.get_height() 
@@ -42,7 +42,7 @@ def game_loop(background):
 	while not done:
 		dt = clock.tick(30)
 		# Main event Loop 
-		for event in pygame.event.get():
+		for event in pygame.event.get():git c
 			if event.type == pygame.QUIT:
 				done = True
 			if event.type == pygame.MOUSEBUTTONDOWN:
@@ -152,7 +152,7 @@ class Player(pygame.sprite.Sprite):
 class Meteor(pygame.sprite.Sprite):
 	def __init__(self, width, height):
 		super().__init__()
-		self.image = random.choice(METEOR_IMAGES)	
+		self.image = random.choice(METEOR_assets)	
 		self.rect = self.image.get_rect()
 
 		# Random starting location
@@ -164,7 +164,7 @@ class Meteor(pygame.sprite.Sprite):
 		self.change_y = random.randrange(-4,3)
 
 	def reset_pos(self, screen):
-		self.image = random.choice(METEOR_IMAGES)
+		self.image = random.choice(METEOR_assets)
 		self.rect = self.image.get_rect()
 
 		self.rect.x = random.randrange(width, (width + 100))
@@ -190,7 +190,7 @@ class Meteor(pygame.sprite.Sprite):
 
 clock = pygame.time.Clock()
 
-background = pygame.image.load("images/background.png")
+background = pygame.image.load("assets/background.png")
 
 # Get dimensions of background
 width = background.get_width()
@@ -200,24 +200,24 @@ screen = pygame.display.set_mode((width,height))
 background = background.convert()
 x = 0 
 
-PLAYER_SURFACE = pygame.image.load("images/player.png").convert_alpha()
-METEOR_IMAGES = []
+PLAYER_SURFACE = pygame.image.load("assets/player.png").convert_alpha()
+METEOR_assets = []
 METEOR_LIST = [
-	"images/meteors/meteor1.png",
-	"images/meteors/meteor2.png",
-	"images/meteors/meteor3.png",
-	"images/meteors/meteor4.png",
-	"images/meteors/meteor5.png",
-	"images/meteors/meteor6.png",
-	"images/meteors/meteor7.png",
-	"images/meteors/meteor8.png",
-	"images/meteors/meteor9.png",
-	"images/meteors/meteor10.png",
-	"images/meteors/meteor11.png",
-	"images/meteors/meteor12.png"
+	"assets/meteors/meteor1.png",
+	"assets/meteors/meteor2.png",
+	"assets/meteors/meteor3.png",
+	"assets/meteors/meteor4.png",
+	"assets/meteors/meteor5.png",
+	"assets/meteors/meteor6.png",
+	"assets/meteors/meteor7.png",
+	"assets/meteors/meteor8.png",
+	"assets/meteors/meteor9.png",
+	"assets/meteors/meteor10.png",
+	"assets/meteors/meteor11.png",
+	"assets/meteors/meteor12.png"
 ]
 for image in METEOR_LIST:
-	METEOR_IMAGES.append(pygame.image.load(image).convert_alpha())
+	METEOR_assets.append(pygame.image.load(image).convert_alpha())
 
 pygame.display.set_caption("Return from Titan")
 
